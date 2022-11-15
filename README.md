@@ -7,7 +7,7 @@
 - jQuery
 - Bootstrap
 
-## ตัวอย่างการใช้งานเบื้องต้น
+# ตัวอย่างการใช้งานเบื้องต้น
 
 - การเพิ่ม ไฟล์/หน้า ใหม่ เริ่มด้วยการ include layout มาครอบ บน-ล่าง และใส่เนื้อหาไปตรงกลางได้เลย เช่น
 
@@ -16,20 +16,37 @@ include('layouts/main_top.php');
     <div>
         <p>HELLO WORLD</p>
     </div>
-include('layouts/main_top.php');
+include('layouts/main_bottom.php');
 ```
 
-- เขียนแค่นี้ จะได้หน้าพร้อมใช้งานที่มี header+footer ของเว็บ พร้อม config, setting และ style ต่างๆ มาเลย สุดยอดดด!!
+- เขียนแค่นี้ จะได้หน้าพร้อมใช้งานที่มี header+footer ของเว็บ พร้อม authentication, config, setting และ style ต่างๆ มาเลย สุดยอดดด!!
 
-## การติดตั้ง
+# เริ่มสร้างโปรเจคใหม่
 
-- โหลด templete เปล่าๆ ที่วางโครงสร้างพร้อมใช้ไว้แล้ว โดย Clone จาก Repo นี้ไปได้เลยครับ
+1. โหลด templete เปล่าๆ ที่วางโครงสร้างพร้อมใช้ไว้แล้ว โดย Clone จาก Repo นี้ไปได้เลยครับ
 
 ```
-git clone https://github.com/micro927/php_templete.git
+git clone https://micro927@bitbucket.org/micro927/php_templete.git
 ```
 
-- มีการใช้ Composer เป็น Dependency Management (ต้องรัน `composer install`)
+2. เข้าไปยังโฟลเดอร์แล้วติดตั้ง packgage เริ่มต้น ด้วย Composer
+
+```
+composer install
+```
+
+3. กำหนดค่า ENV เริ่มต้น
+
+```
+# for database connect
+DB_HOST = ''
+DB_USERNAME = ''
+DB_PASSWORD = ''
+DB_NAME = ''
+
+```
+
+- หมายเหตุ: มีเตรียมไว้ให้ใน .env.example สามารถก๊อปแล้วเปลี่ยนชื่อเป็น .env บน Production server ได้เลย
 
 # อธิบาย Folder ต่างๆ
 
